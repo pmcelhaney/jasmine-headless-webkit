@@ -44,8 +44,6 @@
             http.open('HEAD', location, true);
 
             http.onreadystatechange = function() {
-              console.log(http);
-              console.log(http.getResponseHeader('Last-Modified'));
               callback(http.getResponseHeader('Last-Modified'));
             };
             http.send();
